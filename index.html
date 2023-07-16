@@ -1,0 +1,406 @@
+<!DOCTYPE html><html><head>
+      <title>index</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/gonghuang/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.8/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <div id="top">
+<p><font size="5">HuangGong</font> &#x2003;<a href="#jump_biography"><font size="3" color="545454">Biography</font></a> &#x2003;<a href="#jump_publication"><font size="3" color="545454">Publications</font></a>&#x2003;<a href="#jump_experience"><font size="3" color="545454">Experience</font></a> &#x2003;<a href="#jump_skills"><font size="3" color="545454">Skills</font></a> &#x2003;<a href="#jump_awards"><font size="3" color="545454">Awards</font></a></p>
+</div>
+<div align="center">
+<p><img src="photo.png" alt="Alt text"></p>
+<p><font size="5">Huang Gong(&#x9F9A;&#x714C;)</font><br>
+<font size="3" color="545454">Postgraduate Student</font><br>
+<a href="https://en.szu.edu.cn/"><font size="4">Shenzhen Univercity</font></a><br>
+<a href="https://orcid.org/my-orcid?orcid=0000-0002-4758-6323"><font size="3" color="238E68">ORCID</font></a></p>
+</div>
+<hr>
+<div id="biography">
+<p><span id="jump_biography"></span><br>
+<font size="6"><strong>Biography</strong></font><br>
+<font size="4">Hi there, I am Huang Gong, a graduate student at <a href="https://en.szu.edu.cn/"><font size="4">Shenzhen Univercity</font></a> as well as a primary researcher at <a href="https://cmse.szu.edu.cn/szdw1/jsml/clkxygcx/j_s/r__f.htm">Prof. Feng Rao&apos;s Group</a>.</font></p><font size="4">
+<ul>
+<li>I am particularly interested in research based on the First principles of the Mechanism of Phase-Change Memory and Threshold Transformation Materials. Currently I am trying to research more theories about Phase-Change Memory and Threshold Transformation Materials. See my full <a href="#jump_publication">publication</a> list for detail.</li>
+<li>I have focused on First principles, DFT, AIMD Simulations etc.</li>
+<li>I am also familiar with experimental techniques (PVD) for film preparation and related characterization (XRD, SEM, et al.)</li>
+</ul>
+</font><p><font size="4"><font size="4"><strong>I am actively looking for a Ph.D. position.</strong></font><br>
+</font></p>
+<div id="container">
+<div id="navi">
+<p><font size="5"><strong>Interests</strong></font><br>
+<font size="4"></font></p><font size="4">
+</font><ul><font size="4">
+<li>Phase Change Memory</li>
+<li>Threshold Switching</li>
+</font><li><font size="4">Material computing<br>
+</font><br>
+</li>
+</ul>
+<div>
+<div id="infoi">
+<!-------Education---------->
+<p><font size="5"><strong>Education</strong></font><br>
+<font size="5">Master of Science, 2021.9 - 2024.7</font><br>
+<font size="4" color="545454"> Mathematics(Numerical Calculation and Cross disciplinary Study of Materials), Shenzhen University</font><br>
+<font size="5">Bachelor of Science, 2017.9 - 2021.7</font><br>
+<font size="4" color="545454">Information and Computing Science, Harbin university of science and technology</font><br>
+</p>
+<div>
+</div>
+</div>
+<hr>
+<div id="publication">
+<p><span id="jump_publication"></span><br>
+<font size="6"><strong>Recent Publications</strong></font><br>
+<font size="4">1. Hao Liu*, <strong>Huang Gong</strong>*, Kai Liu*, Keyuan Ding*, Jintao Chen, Chaoyang Liu, Feng Rao. Electronic excitation-induced semiconductor-metal transitions enabling threshold switching in boron telluride glasses. (under review)<br>
+</font></p>
+<p><font size="4">2. Huang J*, Chen B*, Sha G, <strong>Gong H</strong>, Song T, Ding K, Rao F. <a href="https://pubs.acs.org/doi/10.1021/acs.nanolett.3c00262?ref=pdf">Nanoscale Chemical Heterogeneity Ensures Unprecedently Low Resistance Drift in Cache-Type Phase-Change Memory Materials</a>. Nano Lett. 2023 Mar 22;23(6):2362-2369.<br>
+</font></p>
+<p><font size="4">3. Ding keyuan, <strong>Gong Huang</strong> etc. Chinese invention patents ZL202211481819.5&#xFF0C;<a href="http://epub.cnipa.gov.cn/Sw/SwDetail">&#x4E00;&#x79CD;&#x5F02;&#x8D28;&#x7ED3;&#x578B;&#x9608;&#x503C;&#x9009;&#x901A;&#x5668;&#x53CA;&#x5176;&#x5236;&#x5907;&#x65B9;&#x6CD5;</a>(A heterojunction type threshold gate and its production).<br>
+</font></p>
+</div>
+<hr>
+<div id="experience">
+<span id="jump_experience"></span>
+<p><font size="6"><strong>Experience</strong></font></p>
+<!--------Experience1--------->
+<div id="Experience1">
+<table><tbody><tr><td bgcolor="Gainsboro">
+<p><font size="5"><strong>Study on the Mechanism of B-Te Threshold Switching Materials</strong></font></p>
+<p><font size="4"><strong>Connect:</strong><br>
+This project mainly elaborates on the threshold Switching mechanism of B-Te threshold switching materials through theoretical calculations.<br>
+<strong>My works:</strong></font></p><font size="4">
+<ul>
+<li>I adopted a melt-quenching technique to generate the initial B-Te amorphous structures by AIMD.</li>
+<li>I conducted electrical excitation simulation on the initial model.The electronic excitation effect was simulated by transferring a given percentage of electrons from the maximum valence band states to the minimum conduction band states. Atomic configuration analyses, including PCF, BAD, and CND, were then performed.</li>
+<li>I also make some computes about DOS, IPR, MLWF. The DOS was computed using HSE06 hybrid functionals in order to improve the accuracy of band gap calculation. The IPR was computed for each electronic state by measuring and normalizing atomic orbital projections. Smaller IPR values suggest delocalized bulk-like states, whereas greater IPR values indicate stronger localization. To identify bonding configuration change throughout the excitation process, maximally localized Wannier functions (MLWFs) were built. The distinction between LP electron centers and atomic bonding was determined by whether an MLWF center is coupled with a connection between two atoms that is strong enough to be characterized as a bond.</li>
+</ul>
+<p><strong>Result:</strong><br>
+Via ab initio simulating the electronic excitation process of the amorphous boron tellurides, we observed reversible semiconductor-metal transitions that can reflect the switching principles of the selectors. The transient switching in conductance originates from fine structural tunings, namely, the changes of constraint surrounding the big boron clusters, and conversions between covalent and hypervalent bonding schemes throughout the entire tellurium network. Our work provides much-needed atomistic insight into the threshold switching mechanisms that may enlighten the material design to enable superior selector devices.</p>
+</font><p><font size="4"><strong>Graph Show:</strong><br>
+</font></p>
+<p><img src="Fig3.jpg" alt="Alt text"><br>
+<img src="Fig4.jpg" alt="Alt text"><br>
+<img src="CG.png" alt="Alt text"><br>
+<img src="cover.png" alt="Alt text"></p>
+</td></tr></tbody></table>
+</div>
+<div id="Experience1">
+<table><tbody><tr><td bgcolor="Gainsboro">
+<p><font size="5"><strong>Research on the Relevant Principles of Sc<sub>x</sub>Sb<sub>2</sub>Te<sub>3</sub> Phase Change Materials</strong></font></p>
+<p><font size="4"><strong>Connect:</strong><br>
+This project discovered the ultra-low resistance drift phenomenon of Sc<sub>x</sub>Sb<sub>2</sub>Te<sub>3</sub> phase change material and explained the formation principle of its ultra-low resistance drift property through theoretical calculation methods.<br>
+<strong>My works:</strong></font></p><font size="4">
+<ul>
+<li>I adopted a melt-quenching technique to generate the initial Sc<sub>x</sub>Sb<sub>2</sub>Te<sub>3</sub> amorphous structures by AIMD.</li>
+<li>I computed the angular-limited three-body correlation (ALTBC) from the AIMD trajectories, the distorted bond angle of three-atom-chains, e.g., Te&#x2212;Sc&#x2212;Te and Te&#x2212;Sb&#x2212;Te, was required in a range from 155&#xB0; to 180&#xB0;. The two bond lengths formed by the central atom are r<sub>1</sub> and r<sub>2</sub>.</li>
+</ul>
+<p><strong>Result:</strong><br>
+We have demonstrated unprecedentedly low resistance drift in emerging cache-type Sc<sub>x</sub>Sb<sub>2</sub>Te<sub>3</sub> PCMs and untangled the underlying mechanism via AIMD simulations and 3D APT characterizations. We found that the electronic band structure is hardly altered during aging. Intrinsic chemical heterogeneity of Sc and Sb species at the nanoscale is believed to exert certain constraints from medium- to long-range of the disordered Sc<sub>x</sub>Sb<sub>2</sub>Te<sub>3</sub> network, suffocating the atomic motion to freeze the potential structural relaxation. In particular, the local Sc enrichment effectively suppresses the temporal evolvement of Peierls distortion, which may be a key origin for the extremely low resistance drift. With all the superior features like subnanosecond SET speed, low power consumption, fair data retention, and thickness-independent ultralow resistance drift, Sc<sub>x</sub>Sb<sub>2</sub>Te<sub>3</sub> (x = 0.2&#x2212;0.3) serves as a promising candidate for advanced universal memory and in- memory computing.</p>
+</font><p><font size="4"><strong>Graph Show:</strong><br>
+</font></p>
+<p><img src="2.jpeg" alt="Alt text"></p>
+</td></tr></tbody></table>
+</div>
+<hr>
+<div id="skills">
+<p><span id="jump_skills"></span><br>
+<font size="6"><strong>Skills</strong></font></p>
+<p><font size="4">Proficient in VASP&#x3001;Linux&#x3001;C/C++;<br>
+Familiar with Fortran, Python, CP2K, MATLAB;<br>
+Familiar with PVD for film preparation and related experimental operations;<br>
+</font></p>
+</div>
+<hr>
+<div id="awards">
+<p><span id="jump_awards"></span><br>
+<font size="6"><strong>Awards</strong></font><br>
+<font size="4">1.China Undergraduate Mathematical Contest in Modeling &#x2013; First Prize</font>&#x2003; &#x2003; <font style="text-align: right">Nov 2019</font><br>
+<font size="4">2.The Chinese Mathematics Competitions &#x2013; Second Prize</font> &#x2003; &#x2003; &#x2003; &#x2003; &#x2003; &#x2003; &#x2003;&#x2003; <font style="text-align: right">Nov 2019</font><br>
+<font size="4">3.China Undergraduate Mathematical Contest in Modeling &#x2013; Second Prize</font>&#x2003;<font style="text-align: right">Nov 2018</font><br>
+</p>
+</div></div></div></div></div></div>
+      </div>
+      <div class="md-sidebar-toc"></div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
